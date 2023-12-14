@@ -12,3 +12,4 @@ $lang=de
 UPDATE SiteTheme;code[unique=true];name[lang=$lang]
  ;black;"Schwarz"
  ;blue;"Blau"
+ ;code1;"Code1"
