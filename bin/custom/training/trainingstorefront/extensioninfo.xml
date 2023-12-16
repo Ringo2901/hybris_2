@@ -2,7 +2,10 @@
 <!--
  Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved.
 --><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        	
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    	
+    
+    
+    
     
     
     
@@ -141,7 +144,7 @@
     
     
     <extension abstractclassprefix="Generated" classprefix="TrainingStorefront" name="trainingstorefront" usemaven="false">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                		
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        		
         
         
         
@@ -2626,35 +2629,34 @@
         
         
         
-        <requires-extension name="adaptivesearchsamplesaddon"/>
-        <requires-extension name="assistedservicecustomerinterestsaddon"/>
-                
-        <requires-extension name="assistedservicepromotionaddon"/>
-                        
         
-        <requires-extension name="assistedservicestorefront"/>
+        
+        
+        
+        <requires-extension name="questions"/>
+        <requires-extension name="adaptivesearchsamplesaddon"/>
                                 
         
         
-        <requires-extension name="assistedserviceyprofileaddon"/>
+        <requires-extension name="assistedservicecustomerinterestsaddon"/>
                                         
         
         
         
-        <requires-extension name="captchaaddon"/>
+        <requires-extension name="assistedservicepromotionaddon"/>
                                                 
         
         
         
         
-        <requires-extension name="chineseaddressaddon"/>
+        <requires-extension name="assistedservicestorefront"/>
                                                         
         
         
         
         
         
-        <requires-extension name="configurablebundleaddon"/>
+        <requires-extension name="assistedserviceyprofileaddon"/>
                                                                 
         
         
@@ -2662,7 +2664,7 @@
         
         
         
-        <requires-extension name="consignmenttrackingaddon"/>
+        <requires-extension name="captchaaddon"/>
                                                                         
         
         
@@ -2671,7 +2673,7 @@
         
         
         
-        <requires-extension name="customercouponaddon"/>
+        <requires-extension name="chineseaddressaddon"/>
                                                                                 
         
         
@@ -2681,7 +2683,7 @@
         
         
         
-        <requires-extension name="customercouponsamplesaddon"/>
+        <requires-extension name="configurablebundleaddon"/>
                                                                                         
         
         
@@ -2692,7 +2694,7 @@
         
         
         
-        <requires-extension name="customerinterestsaddon"/>
+        <requires-extension name="consignmenttrackingaddon"/>
                                                                                                 
         
         
@@ -2704,7 +2706,7 @@
         
         
         
-        <requires-extension name="customerticketingaddon"/>
+        <requires-extension name="customercouponaddon"/>
                                                                                                         
         
         
@@ -2717,7 +2719,7 @@
         
         
         
-        <requires-extension name="eventtrackingwsaddon"/>
+        <requires-extension name="customercouponsamplesaddon"/>
                                                                                                                 
         
         
@@ -2731,7 +2733,7 @@
         
         
         
-        <requires-extension name="merchandisingaddon"/>
+        <requires-extension name="customerinterestsaddon"/>
                                                                                                                         
         
         
@@ -2746,7 +2748,7 @@
         
         
         
-        <requires-extension name="merchandisingstorefrontsampledataaddon"/>
+        <requires-extension name="customerticketingaddon"/>
                                                                                                                                 
         
         
@@ -2762,7 +2764,7 @@
         
         
         
-        <requires-extension name="multicountrysampledataaddon"/>
+        <requires-extension name="eventtrackingwsaddon"/>
                                                                                                                                         
         
         
@@ -2779,7 +2781,7 @@
         
         
         
-        <requires-extension name="notificationaddon"/>
+        <requires-extension name="merchandisingaddon"/>
                                                                                                                                                 
         
         
@@ -2797,7 +2799,7 @@
         
         
         
-        <requires-extension name="ordermanagementaddon"/>
+        <requires-extension name="merchandisingstorefrontsampledataaddon"/>
                                                                                                                                                         
         
         
@@ -2816,7 +2818,7 @@
         
         
         
-        <requires-extension name="orderselfserviceaddon"/>
+        <requires-extension name="multicountrysampledataaddon"/>
                                                                                                                                                                 
         
         
@@ -2836,7 +2838,7 @@
         
         
         
-        <requires-extension name="pcmbackofficesamplesaddon"/>
+        <requires-extension name="notificationaddon"/>
                                                                                                                                                                         
         
         
@@ -2857,7 +2859,7 @@
         
         
         
-        <requires-extension name="personalizationaddon"/>
+        <requires-extension name="ordermanagementaddon"/>
                                                                                                                                                                                 
         
         
@@ -2879,7 +2881,7 @@
         
         
         
-        <requires-extension name="personalizationsampledataaddon"/>
+        <requires-extension name="orderselfserviceaddon"/>
                                                                                                                                                                                         
         
         
@@ -2902,7 +2904,7 @@
         
         
         
-        <requires-extension name="personalizationyprofilesampledataaddon"/>
+        <requires-extension name="pcmbackofficesamplesaddon"/>
                                                                                                                                                                                                 
         
         
@@ -2926,7 +2928,7 @@
         
         
         
-        <requires-extension name="profiletagaddon"/>
+        <requires-extension name="personalizationaddon"/>
                                                                                                                                                                                                         
         
         
@@ -2951,7 +2953,7 @@
         
         
         
-        <requires-extension name="selectivecartsplitlistaddon"/>
+        <requires-extension name="personalizationsampledataaddon"/>
                                                                                                                                                                                                                 
         
         
@@ -2977,7 +2979,7 @@
         
         
         
-        <requires-extension name="smarteditaddon"/>
+        <requires-extension name="personalizationyprofilesampledataaddon"/>
                                                                                                                                                                                                                         
         
         
@@ -3004,7 +3006,7 @@
         
         
         
-        <requires-extension name="stocknotificationaddon"/>
+        <requires-extension name="profiletagaddon"/>
                                                                                                                                                                                                                                 
         
         
@@ -3032,7 +3034,7 @@
         
         
         
-        <requires-extension name="textfieldconfiguratortemplateaddon"/>
+        <requires-extension name="selectivecartsplitlistaddon"/>
                                                                                                                                                                                                                                         
         
         
@@ -3061,7 +3063,7 @@
         
         
         
-        <requires-extension name="timedaccesspromotionengineaddon"/>
+        <requires-extension name="smarteditaddon"/>
                                                                                                                                                                                                                                                 
         
         
@@ -3091,7 +3093,7 @@
         
         
         
-        <requires-extension name="timedaccesspromotionenginesamplesaddon"/>
+        <requires-extension name="stocknotificationaddon"/>
                                                                                                                                                                                                                                                         
         
         
@@ -3122,7 +3124,7 @@
         
         
         
-        <requires-extension name="xyformssamples"/>
+        <requires-extension name="textfieldconfiguratortemplateaddon"/>
                                                                                                                                                                                                                                                                 
         
         
@@ -3154,7 +3156,7 @@
         
         
         
-        <requires-extension name="xyformsstorefrontcommons"/>
+        <requires-extension name="timedaccesspromotionengineaddon"/>
                                                                                                                                                                                                                                                                         
         
         
@@ -3187,7 +3189,7 @@
         
         
         
-        <requires-extension name="ysapproductconfigaddon"/>
+        <requires-extension name="timedaccesspromotionenginesamplesaddon"/>
                                                                                                                                                                                                                                                                                 
         
         
@@ -3221,8 +3223,119 @@
         
         
         
+        <requires-extension name="xyformssamples"/>
+                                                                                                                                                                                                                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <requires-extension name="xyformsstorefrontcommons"/>
+                                                                                                                                                                                                                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <requires-extension name="ysapproductconfigaddon"/>
+                                                                                                                                                                                                                                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <requires-extension name="acceleratorstorefrontcommons"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                		
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        		
+        
+        
+        
         
         
         
@@ -3361,7 +3474,10 @@
         
         
         <requires-extension name="trainingfacades"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                		
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        		
+        
+        
+        
         
         
         
@@ -3500,7 +3616,7 @@
         
         
         <webmodule jspcompile="false" webroot="/trainingstorefront"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                		
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        		
         
         
         
@@ -3708,8 +3824,14 @@
         
         
         
+        
+        
+        
         <meta key="extgen-template-extension" value="true"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                		
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        		
+        
+        
+        
         
         
         
@@ -3848,7 +3970,10 @@
         
         
         <meta key="deprecated" value="true"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                	
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        	
+    
+    
+    
     
     
     
@@ -3987,7 +4112,10 @@
     
     
     </extension>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+
+
+
 
 
 
