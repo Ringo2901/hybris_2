@@ -21,26 +21,47 @@
 	</relations>
 
 	<itemtypes>
-		<itemtype generate="true" code="Question" autocreate="true">
-			<deployment table="Question" typecode="30270" />
+		<itemtype code="Question" autocreate="true">
+			<deployment table="Question" typecode="30270"/>
 			<attributes>
 				<attribute qualifier="code" type="java.lang.String">
-					<modifiers optional="false" unique="true"/>
+					<description>code attribute of Question</description>
+					<modifiers optional="false" read="true" write="true" search="true" unique="true"/>
 					<persistence type="property"/>
 				</attribute>
 				<attribute qualifier="question" type="java.lang.String">
-					<modifiers optional="false"/>
-					<persistence type="property" />
+					<description>question attribute of Question</description>
+					<modifiers optional="false" read="true" write="true" search="true"/>
+					<persistence type="property"/>
 				</attribute>
 				<attribute qualifier="questionCustomer" type="Customer">
-					<modifiers optional="false"/>
-					<persistence type="property" />
+					<description>questionCustomer attribute of Question</description>
+					<modifiers optional="false" read="true" write="true" search="true"/>
+					<persistence type="property"/>
 				</attribute>
 				<attribute qualifier="answer" type="java.lang.String">
-					<persistence type="property" />
+					<description>answer attribute of Question</description>
+					<modifiers optional="true" read="true" write="true" search="true"/>
+					<persistence type="property"/>
 				</attribute>
 				<attribute qualifier="answerCustomer" type="Customer">
-					<persistence type="property" />
+					<description>answerCustomer attribute of Question</description>
+					<modifiers optional="true" read="true" write="true" search="true"/>
+					<persistence type="property"/>
+				</attribute>
+			</attributes>
+		</itemtype>
+		<itemtype code="QuestionsCMSComponent" extends="SimpleCMSComponent"
+				  autocreate="true" generate="true" abstract="false"
+				  jaloclass="questions.jalo.QuestionsCMSComponent">
+			<attributes>
+				<attribute qualifier="numberOfQuestionsToShow" type="java.lang.Integer">
+					<modifiers optional="false"/>
+					<defaultvalue>3</defaultvalue>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="fontSize" type="java.lang.Integer">
+					<persistence type="property"/>
 				</attribute>
 			</attributes>
 		</itemtype>
