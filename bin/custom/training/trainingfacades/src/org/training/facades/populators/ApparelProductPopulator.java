@@ -67,6 +67,15 @@ public class ApparelProductPopulator implements Populator<ProductModel, ProductD
 				}
 				target.setGenders(genders);
 			}
+			if (CollectionUtils.isNotEmpty(baseProduct.getQuestion()))
+			{
+				final List<QuestionData> questions = new ArrayList<QuestionData>();
+				for (final QuestionModel question : baseProduct.getQuestion())
+				{
+					questions.add(getQuestionConverter().convert(question));
+				}
+				target.setQuestions(questions);
+			}
 		}
 	}
 
