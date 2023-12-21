@@ -1,7 +1,7 @@
 package questions.controllers.cms;
 
 
-import com.hybris.training.questions.data.QuestionData;
+import questions.data.QuestionData;
 import de.hybris.platform.addonsupport.controllers.cms.AbstractCMSAddOnComponentController;
 import de.hybris.platform.commercefacades.product.ProductFacade;
 import de.hybris.platform.commercefacades.product.data.ProductData;

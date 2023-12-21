@@ -20,7 +20,7 @@ import java.util.List;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Required;
-import com.hybris.training.questions.data.QuestionData;
+import questions.data.QuestionData;
 import org.training.core.model.ApparelProductModel;
 import org.training.facades.product.data.GenderData;
 import questions.model.QuestionModel;
@@ -33,6 +33,7 @@ public class ApparelProductPopulator implements Populator<ProductModel, ProductD
 {
 	private Converter<Gender, GenderData> genderConverter;
 	private Converter<QuestionModel, QuestionData> questionConverter;
+
 	protected Converter<Gender, GenderData> getGenderConverter()
 	{
 		return genderConverter;
@@ -67,18 +68,17 @@ public class ApparelProductPopulator implements Populator<ProductModel, ProductD
 				}
 				target.setGenders(genders);
 			}
-			if (CollectionUtils.isNotEmpty(baseProduct.getQuestion()))
+		}
+		if (CollectionUtils.isNotEmpty(baseProduct.getQuestions()))
+		{
+			final List<QuestionData> questions = new ArrayList<QuestionData>();
+			for (final QuestionModel question : baseProduct.getQuestions())
 			{
-				final List<QuestionData> questions = new ArrayList<QuestionData>();
-				for (final QuestionModel question : baseProduct.getQuestion())
-				{
-					questions.add(getQuestionConverter().convert(question));
-				}
-				target.setQuestions(questions);
+				questions.add(getQuestionConverter().convert(question));
 			}
+			target.setQuestions(questions);
 		}
 	}
-
 
 	protected ProductModel getBaseProduct(final ProductModel productModel)
 	{
@@ -90,5 +90,4 @@ public class ApparelProductPopulator implements Populator<ProductModel, ProductD
 		}
 		return currentProduct;
 	}
-
 }

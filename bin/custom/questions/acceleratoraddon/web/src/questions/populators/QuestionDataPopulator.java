@@ -1,4 +1,4 @@
-package com.training.populators;
+package questions.populators;
 
 import questions.data.QuestionData;
 import de.hybris.platform.converters.Populator;

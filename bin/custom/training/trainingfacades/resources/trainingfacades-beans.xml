@@ -6,7 +6,7 @@
 
 	<bean class="de.hybris.platform.commercefacades.product.data.ProductData">
 		<property name="genders" type="java.util.List&lt;org.training.facades.product.data.GenderData&gt;"/>
-		<property name="questions" type="java.util.List&lt;com.hybris.training.questions.data.QuestionData&gt;"/>
+		<property name="questions" type="java.util.List&lt;questions.data.QuestionData&gt;"/>
 	</bean>
 
 	<bean class="org.training.facades.product.data.GenderData">
