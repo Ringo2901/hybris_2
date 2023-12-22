@@ -1,5 +1,5 @@
 $productCatalog=apparelProductCatalog
-$product = product(code, catalogVersion(catalog(id[default = '$productCatalog']), version[default = 'Online']))
+$product = product(code, catalogVersion(catalog(id[default = '$productCatalog']), version[default = 'Staged']))
 
 INSERT_UPDATE Question; code[unique = true]; $product  ; question                              ; questionCustomer(uid)
                       ; 001                ; M33477_B  ; Is it good?                           ; anonymous

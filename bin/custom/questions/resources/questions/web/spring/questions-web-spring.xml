@@ -16,6 +16,8 @@
 	<context:annotation-config/>
 	<context:component-scan base-package="questions" scope-resolver="de.hybris.platform.spring.IgnoreTenantScopeMetadataResolver"/>
 
+	<bean id="QuestionsCMSComponentController" class="questions.controllers.cms.QuestionsCMSComponentController">
+	</bean>
 	<!-- Expose /acceleratoraddon/web/webroot/WEB-INF/messages/base.js.properties  resource bundle as javascript variables -->
 	<bean id="defaultQuestionsJavaScriptMessageResourceAccessor" parent="abstractJavaScriptMessageResourceAccessor">
 		<property name="addOnName" value="questions"/>

@@ -1,14 +1,26 @@
-<%@ page trimDirectiveWhitespaces="true"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<html>
+<body>
 
-<div>Questions</div>
-<c:forEach items="${questions}" var="question">
-    <div>
-            ${question.questionCustomer} ${question.question}
-    </div>
-    <div>
+<div style="font-size: ${fontSize}" class="content">
+    <h2>Questions:</h2>
 
-            ${question.answerCustomer} ${question.answer}
-    </div>
-</c:forEach>
+    <c:if test="${empty productQuestions}">
+        <p>No questions were asked about this product</p>
+    </c:if>
+
+    <c:forEach items="${productQuestions}" var="question">
+        <hr/>
+        <h3>Question by ${question.questionCustomer}:</h3>
+        <p>${question.question}</p>
+        <c:if test="${not empty question.answer}">
+            <h3>Answer by ${question.answerCustomer}: ${question.answer}</h3>
+        </c:if>
+        <hr/>
+    </c:forEach>
+</div>
+
+</body>
+</html>
