@@ -4,14 +4,14 @@
 <html>
 <body>
 
-<div style="font-size: ${fontSize}" class="content">
+<div style="font-size: ${size}" class="content">
     <h2>Questions:</h2>
 
-    <c:if test="${empty productQuestions}">
+    <c:if test="${empty questions}">
         <p>No questions were asked about this product</p>
     </c:if>
 
-    <c:forEach items="${productQuestions}" var="question">
+    <c:forEach items="${questions}" var="question">
         <hr/>
         <h3>Question by ${question.questionCustomer}:</h3>
         <p>${question.question}</p>
