@@ -9,7 +9,6 @@ public class CustomSearchResultVariantProductPopulator extends SearchResultVaria
     public void populate(SearchResultValueData source, ProductData target) {
 
         super.populate(source, target);
-
-        target.setQuestionsCount(this.<String> getValue(source, "questionsCount"));
+        target.setQuestionsCount(Integer.parseInt(getValue(source, "questionsCount").toString()));
     }
 }
