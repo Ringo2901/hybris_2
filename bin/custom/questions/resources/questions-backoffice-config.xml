@@ -64,6 +64,7 @@
                     <editorArea:attribute qualifier="answer"/>
                     <editorArea:attribute qualifier="answerCustomer"/>
                     <editorArea:attribute qualifier="product"/>
+                    <editorArea:attribute qualifier="approve"/>
                 </editorArea:section>
             </editorArea:tab>
             <editorArea:tab name="Q&amp;A">
@@ -71,6 +72,7 @@
                         name="Question">
                     <editorArea:attribute qualifier="question"/>
                     <editorArea:attribute qualifier="answer"/>
+                    <editorArea:attribute qualifier="approve"/>
                 </editorArea:section>
             </editorArea:tab>
         </editorArea:editorArea>
@@ -83,6 +85,7 @@
             <list-view:column qualifier="questionCustomer"/>
             <list-view:column qualifier="answer"/>
             <list-view:column qualifier="answerCustomer"/>
+            <list-view:column qualifier="approve"/>
         </list-view:list-view>
     </context>
     <!-- Advanced search configuration -->

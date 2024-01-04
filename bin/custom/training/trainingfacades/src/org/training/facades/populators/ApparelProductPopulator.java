@@ -74,7 +74,9 @@ public class ApparelProductPopulator implements Populator<ProductModel, ProductD
 			final List<QuestionData> questions = new ArrayList<QuestionData>();
 			for (final QuestionModel question : baseProduct.getQuestions())
 			{
-				questions.add(getQuestionConverter().convert(question));
+				if (question.getApprove()) {
+					questions.add(getQuestionConverter().convert(question));
+				}
 			}
 			target.setQuestions(questions);
 		}
