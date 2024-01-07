@@ -18,6 +18,7 @@
 	<import resource="classpath:/trainingcore/integration/hot-folder-store-apparel-spring.xml"/>
 	<import resource="classpath:/trainingcore/integration/hot-folder-common-spring.xml"/>
 	<import resource="classpath:/trainingcore/integration/hot-folder-training-spring.xml"/>
+	<import resource="classpath:/trainingcore/integration/hot-folder-training-description.xml"/>
 	<!-- SystemSetup for the TrainingCore -->
 	<bean id="acceleratorCoreSystemSetup" class="org.training.core.setup.CoreSystemSetup"
 	       parent="abstractCoreSystemSetup"/>
@@ -253,6 +254,7 @@
 		<property name="modelService" ref="modelService"/>
 		<property name="businessProcessService" ref="businessProcessService"/>
 	</bean>
+
 	<bean id="newQuestionsEmailContext"
 		  class="org.training.facades.process.email.context.NewQuestionsEmailContext"
 		  parent="abstractEmailContext"
