@@ -71,6 +71,12 @@
 					<modifiers optional="true" read="true" write="true" search="true"/>
 					<persistence type="property"/>
 				</attribute>
+				<attribute qualifier="approve" type="java.lang.Boolean">
+					<description>Approve status</description>
+					<modifiers optional="false" read="true" write="true" search="true"/>
+					<persistence type="property"/>
+					<defaultvalue>false</defaultvalue>
+				</attribute>
 			</attributes>
 		</itemtype>
 		<itemtype code="QuestionsCMSComponent" extends="SimpleCMSComponent"

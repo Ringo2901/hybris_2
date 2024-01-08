@@ -9,6 +9,7 @@ import de.hybris.platform.solrfacetsearch.provider.FieldNameProvider;
 import de.hybris.platform.solrfacetsearch.provider.FieldValue;
 import de.hybris.platform.solrfacetsearch.provider.FieldValueProvider;
 import org.springframework.beans.factory.annotation.Required;
+import questions.model.QuestionModel;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -46,7 +47,13 @@ public class ProductQuestionsProvider implements FieldValueProvider, Serializabl
     }
 
     private String getQuestionsCount(ProductModel product, LanguageModel language) {
-        return String.valueOf(product.getQuestions().size());
+        int questionsCount = 0;
+        for (QuestionModel questionModel: product.getQuestions()){
+            if (questionModel.getApprove()){
+                questionsCount++;
+            }
+        }
+        return String.valueOf(questionsCount);
     }
 
     @Required
