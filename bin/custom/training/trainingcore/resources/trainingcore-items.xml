@@ -30,6 +30,23 @@
     <itemtypes>
 
         <!-- Add your item definitions here -->
+        <itemtype code="ProductWarrantyYearsComponent" generate="true"
+                  extends="SimpleCMSComponent" autocreate="true"
+                  jaloclass="org.training.core.jalo.ProductWarrantyYearsComponent">
+            <attributes>
+                <attribute qualifier="years" generate="true" type="java.lang.Integer">
+                    <persistence type="property" />
+                </attribute>
+            </attributes>
+        </itemtype>
+
+        <itemtype generate="true" code="Product" autocreate="false">
+            <attributes>
+                <attribute qualifier="warrantyYears" type="java.lang.Integer">
+                    <persistence type="property" />
+                </attribute>
+            </attributes>
+        </itemtype>
 
         <itemtype code="NewQuestionsEmailProcess" extends="StoreFrontCustomerProcess"
                   jaloclass="org.training.core.jalo.NewQuestionsEmailProcess" >

@@ -4,7 +4,7 @@
 # ImpEx for Importing CMS Content
 
 # Macros / Replacement Parameter definitions
-$contentCatalog=__CONTENT_CATALOG_NAME__
+$contentCatalog=apparel-ukContentCatalog
 $contentCatalogName=__CONTENT_CATALOG_FULL_NAME__
 $productCatalog=__PRODUCT_CATALOG_NAME__
 $productCatalogName=__PRODUCT_CATALOG_FULL_NAME__
@@ -20,6 +20,9 @@ $siteResource=jar:org.training.initialdata.setup.InitialDataSystemSetup&/trainin
 $productResource=jar:org.training.initialdata.setup.InitialDataSystemSetup&/traininginitialdata/import/productCatalogs/$productCatalog
 $jarResourceCms=jar:org.training.initialdata.setup.InitialDataSystemSetup&/traininginitialdata/import/cockpits/cmscockpit
 
+
+INSERT_UPDATE ProductWarrantyYearsComponent; $contentCV[unique = true]; uid[unique = true]            ; name                     ; &componentRef
+                                           ;                          ; ProductWarrantyYearsComponent ; Warranty Years Component ; ProductWarrantyYearsComponent
 
 # CMS Site Settings
 UPDATE CMSSite;uid[unique=true];defaultPreviewCategory(code, $productCV);defaultPreviewProduct(code, $productCV);defaultPreviewCatalog(id, $productCatalog)
@@ -99,7 +102,14 @@ INSERT_UPDATE SearchResultsListComponent;$contentCV[unique=true];uid[unique=true
 INSERT_UPDATE SearchResultsListComponent;$contentCV[unique=true];uid[unique=true];name;actions(uid,$contentCV);&componentRef
 
 # Content Slots
-INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]       ; cmsComponents(&componentRef)  ; active
+                         ;                          ; WarrantyYearsContentSlot ; ProductWarrantyYearsComponent ; true
+
+INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = true]                      ; position[unique = true]; pageTemplate(uid, $contentCV)[unique = true][default = 'ProductDetailsPageTemplate']; contentSlot(uid, $contentCV)[unique = true]
+                                    ;                          ; warrantyyearsslotforpage-ProductDetails ; WarrantyYears          ;                                                                                     ; WarrantyYearsContentSlot
+
+INSERT_UPDATE ContentSlotName; name[unique = true]      ; template(uid, $contentCV)[unique = true][default = 'ProductDetailsPageTemplate']; validComponentTypes(code)     ; compTypeGroup(code)
+                             ; WarrantyYearsContentSlot ;                                                                                 ; ProductWarrantyYearsComponent ;
 
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];mime;realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];folder(qualifier)[default='images']
 
