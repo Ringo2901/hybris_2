@@ -10,5 +10,5 @@ public class CustomSearchResultVariantProductPopulator extends SearchResultVaria
 
         super.populate(source, target);
         target.setQuestionsCount(Integer.parseInt(getValue(source, "questionsCount").toString()));
-    }
+        target.setWarrantyYears(this.<Integer> getValue(source, "warrantyYears"));    }
 }

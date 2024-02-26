@@ -24,6 +24,10 @@
 	       parent="abstractCoreSystemSetup"/>
 
 	<!-- Solr field value providers -->
+	<bean id="productWarrantyYearsProvider"
+		  class="org.training.core.search.solrfacetsearch.provider.impl.ProductWarrantyYearsProvider" >
+		<property name="fieldNameProvider" ref="solrFieldNameProvider"/>
+	</bean>
 	<bean id="productQuestionsProvider"
 		  class="org.training.core.search.solrfacetsearch.provider.impl.ProductQuestionsProvider" >
 		<property name="fieldNameProvider" ref="solrFieldNameProvider"/>
